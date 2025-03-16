@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Resume - myass</title>
         <script>
             // Authentication script
             const requiredUsername = "sumanResume";
@@ -19,7 +18,14 @@
                 }
             }
         </script>
+        <title>Resume - Suman</title>
+        <link rel="icon" href="Resume.png" type="image/x-icon">
         <style>
+
+            .title{
+                background-color: #002f62;
+            }
+
             body {
                 background-image: url("image_background.jpg");
                 background-size: cover;
@@ -95,37 +101,71 @@
             }
 
             .logo_container {
-                display: inline-block;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                padding-right: 40px;
                 padding-left: 40px;
                 text-align: center;
-                margin: 20px;
+                margin-bottom: 40px;
                 background-image: url("haha.jpg");
-                background-size: cover;
+                
                 background-blend-mode: darken;
                 border-radius: 50px;
-                width: 250px;
-                transition: 0.5s;
+                width: 200px;
+                transition: 0.4s ease;
+                padding-bottom: 20px;
                 
             }
 
-            .logo_container:hover{
-                width:400px;
-                transition: 0.75s;
+            .logo_container1{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 30px;
+                padding-right: 40px;
+                padding-left: 40px;
+                padding-top: 30px;
+                text-align: center;
+                margin: 40px;
+                background-image: url("haha.jpg");
+                height: 200px;
+                background-blend-mode: darken;
+                border-radius: 50px;
+                width: 100%;
+                transition: 0.4s ease;
+                padding-bottom: 30px;
+                
             }
+
+            
 
             .java {
-                margin-top: 30px;
-                margin-left: 15px;
-                margin-bottom: 40px;
+                align-content: center;
                 width: 180px;
                 height: 180px;
-                line-height: 20px;
+                margin-right: 20px;
+                margin-left: 20px;
                 background-color: aliceblue;
                 border-radius: 150px;
-                
+                transition: 0.3s ease;
             }
+
+            .java:hover {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                align-items: center;
+                width: 180px;
+                height: 180px;
+                background-color: aliceblue;
+                border-radius: 150px;
+                transition: 0.3s ease;
+            }
+
+            
 
             .java_i {
                 padding-top: 20px;
@@ -140,13 +180,14 @@
             }
 
             .programming, .database {
-                margin-right: 40px;
                 margin-top: 40px;
                 margin-bottom: 40px;
                 color: rgb(254, 254, 254);
+                object-position: center;
             }
 
             .skills_container{
+                
                 padding-top: 50px;
                 background-image: url("background.jpg");
                 background-size: cover;
@@ -236,8 +277,9 @@
                 max-width: 300px;
             }
 
-            .p{
+            .p1{
                 font-family: Arial, Helvetica, sans-serif;
+                line-height: 30px;
             }
 
             .documents{
@@ -294,6 +336,15 @@
                 border-radius: 20px;
                 transition: 0.75s;
             }
+
+            .tskill_c{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: center;
+
+            }
             
 
 
@@ -322,66 +373,117 @@
 
         <div class="skills_container">
             <h2 class="skill_h">Skills</h2>
-            <h3 class="skill_sh">Technical Skills</h3>
-            
-            <div class="logo_container">
-                <h4 class="programming">PROGRAMMING</h4>
-                <div class="java">
-                    <img class="java_i" src="Java-Logo.png" alt="Java Logo">
-                    <h4 class="java_d">JAVA</h4>
+            <h3 class="skill_sh">&#xf108 Technical Skills</h3>
+            <div class="tskill_c">
+                <div class="logo_container">
+                    <h4 class="programming">PROGRAMMING</h4>
+                    <div class="java">
+                        <img class="java_i" src="Java-Logo.png" alt="Java Logo">
+                        <h4 class="java_d">JAVA</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="c.png" alt="C Logo">
+                        <h4 class="java_d">C Programming</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="python.png" alt="Python Logo">
+                        <h4 class="java_d">Python</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="html.png" alt="HTML Logo">
+                        <h4 class="java_d">HTML</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="CSS.png" alt="CSS Logo">
+                        <h4 class="java_d">CSS</h4>
+                    </div>
                 </div>
-                <div class="java">
-                    <img class="java_i" src="c.png" alt="C Logo">
-                    <h4 class="java_d">C Programming</h4>
+    
+                <div class="logo_container">
+                    <h4 class="database">GUI FRAMEWORKS</h4>
+                    <div class="java">
+                        <img class="java_i" src="FX.png" alt="JavaFX Logo">
+                        <h4 class="java_d">JavaFX</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="jswing.png" alt="JSwing Logo Logo">
+                        <h4 class="java_d">Java Swing</h4>
+                    </div>
                 </div>
-                <div class="java">
-                    <img class="java_i" src="python.png" alt="Python Logo">
-                    <h4 class="java_d">Python</h4>
+                
+                <div class="logo_container">
+                    <h4 class="database">DATABASE</h4>
+                    <div class="java">
+                        <img class="java_i" src="SQL.avif" alt="MySQL Logo">
+                        <h4 class="java_d">MySQL</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="mongo.png" alt="MongoDB Logo">
+                        <h4 class="java_d">MongoDB</h4>
+                    </div>
                 </div>
-                <div class="java">
-                    <img class="java_i" src="html.png" alt="HTML Logo">
-                    <h4 class="java_d">HTML</h4>
+    
+                
+    
+                <div class="logo_container">
+                    <h4 class="database">VERSION CONTROL</h4>
+                    <div class="java">
+                        <img class="java_i" src="git.png" alt="git Logo">
+                        <h4 class="java_d">git</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="github.png" alt="github Logo">
+                        <h4 class="java_d">github</h4>
+                    </div>
                 </div>
-                <div class="java">
-                    <img class="java_i" src="CSS.png" alt="CSS Logo">
-                    <h4 class="java_d">CSS</h4>
-                </div>
-            </div>
 
-            <div class="logo_container">
-                <h4 class="database">GUI FRAMEWORKS</h4>
-                <div class="java">
-                    <img class="java_i" src="FX.png" alt="JavaFX Logo">
-                    <h4 class="java_d">JavaFX</h4>
+                <div class="logo_container">
+                    <h4 class="database">API & BACKEND</h4>
+                    <div class="java">
+                        <img class="java_i" src="sb.png" alt="git Logo">
+                        <h4 class="java_d">Spring Boot</h4>
+                    </div>
+                    
                 </div>
-                <div class="java">
-                    <img class="java_i" src="jswing.png" alt="JSwing Logo Logo">
-                    <h4 class="java_d">Java Swing</h4>
-                </div>
+            
             </div>
             
-            <div class="logo_container">
-                <h4 class="database">DATABASE</h4>
-                <div class="java">
-                    <img class="java_i" src="SQL.avif" alt="MySQL Logo">
-                    <h4 class="java_d">MySQL</h4>
-                </div>
-                <div class="java">
-                    <img class="java_i" src="mongo.png" alt="MongoDB Logo">
-                    <h4 class="java_d">MongoDB</h4>
-                </div>
-            </div>
-
-            
-
-            <div class="logo_container">
-                <h4 class="database">SE METHADOLOGIES</h4>
-                <div class="java">
-                    <img class="java_i" src="AGILE.png" alt="JavaFX Logo">
-                    <h4 class="java_d">AGILE</h4>
-                </div>
-            </div>
         </div>
+
+        <div class="skills_container">
+            <h3 class="skill_sh">Professional Skills</h3>
+            <div class="tskill_c">
+                <div class="logo_container1">
+                    <h4 class="programming">PROGRAMMING</h4>
+                    <div class="java">
+                        <img class="java_i" src="Java-Logo.png" alt="Java Logo">
+                        <h4 class="java_d">JAVA</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="c.png" alt="C Logo">
+                        <h4 class="java_d">C Programming</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="python.png" alt="Python Logo">
+                        <h4 class="java_d">Python</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="html.png" alt="HTML Logo">
+                        <h4 class="java_d">HTML</h4>
+                    </div>
+                    <div class="java">
+                        <img class="java_i" src="CSS.png" alt="CSS Logo">
+                        <h4 class="java_d">CSS</h4>
+                    </div>
+                </div>
+    
+                    
+                </div>
+            
+            </div>
+            
+        </div>
+
 
         <div class="ab">
             <h2 class="ab_h">ACADEMIC BACKGROUND</h2>
@@ -460,10 +562,37 @@
             </div>
 
             <div>
-                <p class="we_h"><strong>Employee ID - </strong></p>
-                <p><strong>Designation - </strong></p>
-                <p><strong>Client - </strong></p>
-                <p><strong>Description - </strong></p>
+                <p class="we_h"><strong>Employee ID - </strong>111015313</p>
+                <p><strong>Designation - </strong>Chat Associate III</p>
+                <p><strong>Client - </strong>eBay UK</p>
+                <p><strong>LOB - </strong>Business Seller Account</p>
+                <p><strong>DOJ - </strong>04-06-2021</p>
+                <p><strong>DOR - </strong>05-07-2022</p>
+                <p class="p1"><strong>Description - </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, veniam id ut ducimus voluptatibus saepe debitis. Officia ab nulla unde. Nihil dolor repellat obcaecati ipsum corporis quaerat eum praesentium architecto?</p>
+            </div>
+                    
+        </div>
+
+        <div class="documents">
+            <button class="appointment_l" onclick= "window.open('document.pdf', '_blank')" >Appointment Letter</button>
+            <button class="appointment_l" onclick="window.open('release_letter.pdf','_blank')">Release Letter</button>
+            <button class="appointment_l" onclick="window.open('service_certificate.pdf','_blank')">Service Certificate</button>
+        </div>
+
+
+        <div class="work_exp_container">
+            <div class="we_img">
+                <img src="ttec.png" class="ttec_img">
+            </div>
+
+            <div>
+                <p class="we_h"><strong>Employee ID - </strong>111015313</p>
+                <p><strong>Designation - </strong>Chat Associate III</p>
+                <p><strong>Client - </strong>eBay UK</p>
+                <p><strong>LOB - </strong>Business Seller Account</p>
+                <p><strong>DOJ - </strong>04-06-2021</p>
+                <p><strong>DOR - </strong>05-07-2022</p>
+                <p class="p1"><strong>Description - </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, veniam id ut ducimus voluptatibus saepe debitis. Officia ab nulla unde. Nihil dolor repellat obcaecati ipsum corporis quaerat eum praesentium architecto?</p>
             </div>
                     
         </div>

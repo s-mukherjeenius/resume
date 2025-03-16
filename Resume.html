@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume - Suman</title>
+        <script>
+            // Authentication script
+            const requiredUsername = "sumanResume";
+            const requiredPassword = "Resume2001";
+            
+            let authenticated = false;
+            while (!authenticated) {
+                const enteredUsername = prompt("Enter username:");
+                const enteredPassword = prompt("Enter password:");
+                
+                if (enteredUsername === requiredUsername && enteredPassword === requiredPassword) {
+                    authenticated = true;
+                } else {
+                    alert("Invalid credentials. Please try again.");
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-image: url("image_background.jpg");
+                background-size: cover;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .header_container {
+                display: flex;
+                height: 180px;
+                width: 100%;
+                background-image: url("image2.jpg");
+                background-size: cover;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px rgb(0, 0, 0);
+                position: fixed;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .name_section {
+                flex: 1;
+                margin-left: 20px;
+            }
+
+            .pp_container {
+                width: 160px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+
+            .summary_container {
+                padding-top: 200px;
+                margin-bottom: 30px;
+                margin-top: 10px;
+            }
+
+            .profile_pic {
+                width: 100%;
+                height: 100%;
+                border-radius: 120px;
+                
+            }
+
+            .name {
+                color: rgb(38, 36, 36);
+            }
+
+            .designation {
+                color: rgb(105, 101, 101);
+                font-style: italic;
+            }
+
+            .contact_info {
+                color: rgb(105, 101, 101);
+                line-height: 30px;
+            }
+
+            .skill_h, .skill_sh {
+                color: rgb(23, 23, 23);
+                padding-left: 18px;
+                margin-bottom: 30px;
+            }
+
+            .summary_c {
+                text-align: justify;
+                padding-left: 18px;
+                padding-right: 18px;
+                color: rgb(67, 67, 67);
+                line-height: 25px;
+            }
+
+            .logo_container {
+                display: inline-block;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 60px;
+                padding-left: 40px;
+                text-align: center;
+                margin: 20px;
+                background-image: url("haha.jpg");
+                background-size: cover;
+                background-blend-mode: darken;
+                border-radius: 50px;
+                width: 250px;
+                transition: 0.5s;
+                
+            }
+
+            .logo_container:hover{
+                width:400px;
+                transition: 0.75s;
+            }
+
+            .java {
+                margin-top: 30px;
+                margin-left: 15px;
+                margin-bottom: 40px;
+                width: 180px;
+                height: 180px;
+                line-height: 20px;
+                background-color: aliceblue;
+                border-radius: 150px;
+                
+            }
+
+            .java_i {
+                padding-top: 20px;
+                width: 60%;
+                height: 60%;
+            }
+
+            .java_d {
+                margin-top: 10px;
+                color: rgb(0, 0, 0);
+                font-size: small;
+            }
+
+            .programming, .database {
+                margin-right: 40px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                color: rgb(254, 254, 254);
+            }
+
+            .skills_container{
+                padding-top: 50px;
+                background-image: url("background.jpg");
+                background-size: cover;
+                
+            }
+            
+            .summary_h{
+                color: rgb(35, 35, 35);
+                padding-left: 18px;
+                margin-bottom: 30px;
+            }
+
+            .ab{
+                margin-right: 50px;
+                margin-left: 42px;
+                margin-top: 50px;
+                
+            }
+
+            table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 50px;
+            }
+
+            th, td {
+                padding: 12px;
+                border: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #002f62;
+                color: white;
+                text-align: center;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            tr:hover {
+                background-color: #ddd;
+                transition: 0.3s;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            .ab_h{
+                margin-bottom: 50px;
+            }
+
+            .work_exp_h{
+                margin-top: 80px;
+                margin-bottom: 40px;
+                margin-left: 30px;
+                color: rgb(23, 23, 23);
+                padding-left: 18px;
+                
+            }
+
+            .work_exp_container{
+                display: grid;
+                grid-template-columns: 300px 1fr;
+                gap: 100px;
+                margin-left: 25px;
+                margin-right: 25px;
+                margin-bottom: 50px;
+                background-color: #00416a2d;
+                border-radius: 50px;
+                padding-left: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+            }
+
+            
+
+            
+
+            .ttec_img{
+                max-height: 300px;
+                max-width: 300px;
+            }
+
+            .p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .documents{
+                margin-left: 40px;
+                margin-bottom: 100px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .appointment_l{
+                background-color: rgb(0, 44, 71);
+                color: rgb(255, 255, 255);
+                width: 200px;
+                height: 60px;
+                border-color: #ffffff;
+                line-height: 20px;
+                border-radius: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 1px;
+                margin-right: 30px;
+                transition: 0.5s;
+            }
+
+            .appointment_l:hover{
+                background-color: rgb(0, 44, 71);
+                color: rgb(255, 255, 255);
+                width: 300px;
+                height: 60px;
+                border-color: #ffffff;
+                line-height: 20px;
+                border-radius: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 1px;
+                transition: 0.5s;
+                
+            }
+
+            .table_buttons{
+                border-color: beige;
+                width: 100px;
+                height: 30px;
+                color: rgb(255, 255, 255);
+                background-color: #002f62;
+                border-radius: 20px;
+                transition: 0.75s;
+            }
+
+            .table_buttons:hover{
+                border-color: beige;
+                width: 150px;
+                height: 30px;
+                color: rgb(255, 255, 255);
+                background-color: #002f62;
+                border-radius: 20px;
+                transition: 0.75s;
+            }
+            
+
+
+           
+        </style>
+    </head>
+
+    <body>
+        <div class="header_container">
+            <div class="name_section">
+                <h1 class="name">Suman Mukherjee</h1>
+                <p class="designation">Bachelor of Computer Applications</p>
+                <p class="contact_info">&#9742; +91 95002&#8203;70788 &#9993 sumanmukherjee3699@gmail.com</p>
+            </div>
+            <div class="pp_container">
+                <img src="profilepic1.png" class="profile_pic" alt="Profile Picture">
+            </div>
+        </div>
+
+        <div class="summary_container">
+            <h2 class="summary_h">Summary</h2>
+            <p class="summary_c">
+                Results-driven BCA student at Amity University Kolkata with hands-on experience in Quality Assurance (QA) and software testing for mobile applications. Skilled in manual and automated testing, cybersecurity fundamentals, and web development with a strong foundation in JavaScript, C, and C++. As a QA Lead for a cruise liner company, I have led mobile app testing for Android and iOS, ensuring optimal performance and security. Passionate about cybersecurity, ethical hacking, and optimizing software reliability, I am eager to contribute my skills to innovative tech solutions.
+            </p>
+        </div>
+
+        <div class="skills_container">
+            <h2 class="skill_h">Skills</h2>
+            <h3 class="skill_sh">Technical Skills</h3>
+            
+            <div class="logo_container">
+                <h4 class="programming">PROGRAMMING</h4>
+                <div class="java">
+                    <img class="java_i" src="Java-Logo.png" alt="Java Logo">
+                    <h4 class="java_d">JAVA</h4>
+                </div>
+                <div class="java">
+                    <img class="java_i" src="c.png" alt="C Logo">
+                    <h4 class="java_d">C Programming</h4>
+                </div>
+                <div class="java">
+                    <img class="java_i" src="python.png" alt="Python Logo">
+                    <h4 class="java_d">Python</h4>
+                </div>
+                <div class="java">
+                    <img class="java_i" src="html.png" alt="HTML Logo">
+                    <h4 class="java_d">HTML</h4>
+                </div>
+                <div class="java">
+                    <img class="java_i" src="CSS.png" alt="CSS Logo">
+                    <h4 class="java_d">CSS</h4>
+                </div>
+            </div>
+
+            <div class="logo_container">
+                <h4 class="database">GUI FRAMEWORKS</h4>
+                <div class="java">
+                    <img class="java_i" src="FX.png" alt="JavaFX Logo">
+                    <h4 class="java_d">JavaFX</h4>
+                </div>
+                <div class="java">
+                    <img class="java_i" src="jswing.png" alt="JSwing Logo Logo">
+                    <h4 class="java_d">Java Swing</h4>
+                </div>
+            </div>
+            
+            <div class="logo_container">
+                <h4 class="database">DATABASE</h4>
+                <div class="java">
+                    <img class="java_i" src="SQL.avif" alt="MySQL Logo">
+                    <h4 class="java_d">MySQL</h4>
+                </div>
+                <div class="java">
+                    <img class="java_i" src="mongo.png" alt="MongoDB Logo">
+                    <h4 class="java_d">MongoDB</h4>
+                </div>
+            </div>
+
+            
+
+            <div class="logo_container">
+                <h4 class="database">SE METHADOLOGIES</h4>
+                <div class="java">
+                    <img class="java_i" src="AGILE.png" alt="JavaFX Logo">
+                    <h4 class="java_d">AGILE</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="ab">
+            <h2 class="ab_h">ACADEMIC BACKGROUND</h2>
+            <h3>Secondary Education</h3>
+            <table>
+                <tr>
+                    <th>Grade</th>
+                    <th>School</th>
+                    <th>Board</th>
+                    <th>Stream</th>
+                    <th>Passing Year</th>
+                    <th>Marks</th>
+                    <th>Documentation</th>
+                </tr>
+
+                <tr>
+                    <td>X</td>
+                    <td>Chennai Public School</td>
+                    <td>CBSE</td>
+                    <td>N/A</td>
+                    <td>2016</td>
+                    <td>8.1</td>
+                    <td><button class="table_buttons" onclick="window.open('10th.pdf','_blank')">Click here</button></td>
+                </tr>
+
+                <tr>
+                    <td>XII</td>
+                    <td>Chennai Public School</td>
+                    <td>CBSE</td>
+                    <td>PCM (Physics, Chemistry, Math)</td>
+                    <td>2018</td>
+                    <td>6.5</td>
+                    <td><button class="table_buttons" onclick="window.open('12th.pdf','_blank')">Click here</button></td>
+                </tr>
+
+                
+                
+            </table>
+
+            <h3>Ungergraduate (UG) - Bachelor's Degree (Persuing)</h3>
+
+            <table>
+                <tr>
+                    <th>University</th>
+                    <th>Department</th>
+                    <th>Course</th>
+                    <th>Joining Year</th>
+                    <th>Passing Year</th>
+                    <th>CGPA</th>
+                </tr>
+
+                <tr>
+                    <td>Amity University Kolkata</td>
+                    <td>Amity Institute of Information Technology</td>
+                    <td>BCA (Bachelor of Computer Applications)</td>
+                    <td>2023</td>
+                    <td>2026</td>
+                    <td>8.38</td>
+                </tr>
+
+                
+            </table>
+
+            
+            
+        </div>
+
+        <div class="work_exp_h">
+            <h2>WORK EXPERIENCE</h2>
+        </div>
+
+
+        <div class="work_exp_container">
+            <div class="we_img">
+                <img src="ttec.png" class="ttec_img">
+            </div>
+
+            <div>
+                <p class="we_h"><strong>Employee ID - </strong></p>
+                <p><strong>Designation - </strong></p>
+                <p><strong>Client - </strong></p>
+                <p><strong>Description - </strong></p>
+            </div>
+                    
+        </div>
+
+        <div class="documents">
+            <button class="appointment_l" onclick= "window.open('document.pdf', '_blank')" >Appointment Letter</button>
+            <button class="appointment_l" onclick="window.open('release_letter.pdf','_blank')">Release Letter</button>
+            <button class="appointment_l" onclick="window.open('service_certificate.pdf','_blank')">Service Certificate</button>
+        </div>
+                
+                
+    
+            
+            
+        
+    </body>
+</html>
